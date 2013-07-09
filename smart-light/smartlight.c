@@ -9,10 +9,10 @@
 ** UART to the RL78 MCU to drive 2 seven-segment displays.
 **
 **		Vcc---/\/\/\/-------o-------([/])--------GND
-**			3k resistor		|	photoresistor
-**							|
-**						V measured
-**					   (P1.4 input)
+**                  3k resistor	    |	photoresistor
+**				    |
+**				V measured
+**			       (P1.4 input)
 **
 */
 

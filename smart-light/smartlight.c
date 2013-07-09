@@ -1,3 +1,21 @@
+/*
+** Smart lighting feature that turns on if the light intensity is below a certain
+** threshold. The LEDs pulsate based on the light intensity. The lower the intensity,
+** the brighter the room is and thus the LEDs will pulsate dimly. The higher the
+** intensity, the darker the room is and thus the LEDs will pulsate brightly.
+**
+** The analog voltage measured (see below) will be the ADC10 input. This value will
+** determine the duty cycle of the PWMs that drive the LEDs. It will also be sent via
+** UART to the RL78 MCU to drive 2 seven-segment displays.
+**
+**		Vcc---/\/\/\/-------o-------([/])--------GND
+**			3k resistor		|	photoresistor
+**							|
+**						V measured
+**					   (P1.4 input)
+**
+*/
+
 #include "msp430g2553.h"
 #include <stdio.h>
 
